@@ -39,7 +39,7 @@ namespace SignalRServer
                 {
                     policy.AllowAnyHeader()
                     .AllowAnyMethod()
-                    .WithOrigins("http://localhost:3000")
+                    .WithOrigins("http://localhost:3000", "http://localhost:3001")
                     .AllowCredentials();
                 });
             });
