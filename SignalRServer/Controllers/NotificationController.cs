@@ -21,6 +21,7 @@ namespace SignalRServer.Controllers
         }
 
         [HttpPost]
+        [Route("Subscriptions")]
         public async Task SubscribePaymentStatus(string id)
         {
             await _hubContext.Clients.Client(id).ReceiveNotification(new Notification
@@ -46,6 +47,16 @@ namespace SignalRServer.Controllers
                 Description = "Payment Success"
             });
 
+        }
+
+        [HttpPost]
+        public async Task SendNotification(string id, string code, string description)
+        {
+            await _hubContext.Clients.Client(id).ReceiveNotification(new Notification
+            {
+                Code = code,
+                Description = description
+            });
         }
     }
 }
