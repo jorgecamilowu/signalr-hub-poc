@@ -26,7 +26,7 @@ namespace SignalRServer
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SignalRServer.Api", Version = "v1" });
             });
-            services.AddSignalR();
+            services.AddSignalR().AddAzureSignalR();
             services.AddCors(options =>
             {
                 /*
@@ -64,7 +64,7 @@ namespace SignalRServer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<NotificationHub>("/hub/chat");
+                endpoints.MapHub<NotificationHub>("/hub/notification");
             });
         }
     }
