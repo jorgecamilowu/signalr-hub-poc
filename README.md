@@ -1,6 +1,6 @@
 # Signal R - POC
 
-Server-side code configuring a Connection Hub
+Server-side code configuring a Connection Hub. This project works in tandem with this client: https://github.com/jorgecamilowu/signalr-poc-client
 
 ## Set Up
 
