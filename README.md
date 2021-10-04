@@ -10,6 +10,6 @@ Server-side code configuring a Connection Hub
  3. Configure dotnet user-secrets and add the connection string:  
 		3.1. `dotnet user-secrets init `  
 		3.2. `dotnet user-secrets set Azure:SignalR:ConnectionString "<Your connection string>"`  
-4. Ruin and build:  
+4. Run and build:  
 		4.1. `dotnet build`  
 		4.2. `dotnet run`  
